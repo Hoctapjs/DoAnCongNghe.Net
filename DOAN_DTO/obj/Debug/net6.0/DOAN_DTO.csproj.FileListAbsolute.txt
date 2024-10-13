@@ -1,0 +1,12 @@
+D:\CongNgheNet\QL_TRASUA\DOAN_DTO\bin\Debug\net6.0\DOAN_DTO.deps.json
+D:\CongNgheNet\QL_TRASUA\DOAN_DTO\bin\Debug\net6.0\DOAN_DTO.dll
+D:\CongNgheNet\QL_TRASUA\DOAN_DTO\bin\Debug\net6.0\DOAN_DTO.pdb
+D:\CongNgheNet\QL_TRASUA\DOAN_DTO\obj\Debug\net6.0\DOAN_DTO.csproj.AssemblyReference.cache
+D:\CongNgheNet\QL_TRASUA\DOAN_DTO\obj\Debug\net6.0\DOAN_DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\CongNgheNet\QL_TRASUA\DOAN_DTO\obj\Debug\net6.0\DOAN_DTO.AssemblyInfoInputs.cache
+D:\CongNgheNet\QL_TRASUA\DOAN_DTO\obj\Debug\net6.0\DOAN_DTO.AssemblyInfo.cs
+D:\CongNgheNet\QL_TRASUA\DOAN_DTO\obj\Debug\net6.0\DOAN_DTO.csproj.CoreCompileInputs.cache
+D:\CongNgheNet\QL_TRASUA\DOAN_DTO\obj\Debug\net6.0\DOAN_DTO.dll
+D:\CongNgheNet\QL_TRASUA\DOAN_DTO\obj\Debug\net6.0\refint\DOAN_DTO.dll
+D:\CongNgheNet\QL_TRASUA\DOAN_DTO\obj\Debug\net6.0\DOAN_DTO.pdb
+D:\CongNgheNet\QL_TRASUA\DOAN_DTO\obj\Debug\net6.0\ref\DOAN_DTO.dll

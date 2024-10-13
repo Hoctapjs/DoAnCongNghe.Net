@@ -1,0 +1,17 @@
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\bin\Debug\net6.0\DOAN_BLL.deps.json
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\bin\Debug\net6.0\DOAN_BLL.dll
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\bin\Debug\net6.0\DOAN_BLL.pdb
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\bin\Debug\net6.0\DOAN_DAL.dll
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\bin\Debug\net6.0\DOAN_DTO.dll
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\bin\Debug\net6.0\DOAN_DAL.pdb
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\bin\Debug\net6.0\DOAN_DTO.pdb
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\obj\Debug\net6.0\DOAN_BLL.csproj.AssemblyReference.cache
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\obj\Debug\net6.0\DOAN_BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\obj\Debug\net6.0\DOAN_BLL.AssemblyInfoInputs.cache
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\obj\Debug\net6.0\DOAN_BLL.AssemblyInfo.cs
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\obj\Debug\net6.0\DOAN_BLL.csproj.CoreCompileInputs.cache
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\obj\Debug\net6.0\DOAN_BLL.csproj.CopyComplete
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\obj\Debug\net6.0\DOAN_BLL.dll
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\obj\Debug\net6.0\refint\DOAN_BLL.dll
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\obj\Debug\net6.0\DOAN_BLL.pdb
+D:\CongNgheNet\QL_TRASUA\DOAN_BLL\obj\Debug\net6.0\ref\DOAN_BLL.dll
