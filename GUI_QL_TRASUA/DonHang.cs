@@ -1,4 +1,5 @@
 ﻿using DOAN_BLL;
+using DOAN_DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +33,69 @@ namespace GUI_QL_TRASUA
             Home home = new Home();
             home.ShowDialog();
             dh.Close();
+        }
+
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+            BLL bll = new BLL();
+            DONHANGDTO dh = new DONHANGDTO
+            {
+                MAKH = Convert.ToInt32(txt_makh.Text),
+                NGAYLAP = (txt_ngaylap.Text),
+                TONGGIA = decimal.Parse(txt_tonggia.Text)
+            };
+            bool isSuccess = bll.ThemDonHang(dh);
+            if (isSuccess)
+            {
+                MessageBox.Show("Thành công");
+                LoadDonHang();
+            }
+            else
+            {
+                MessageBox.Show("Thất bại");
+            }
+
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            BLL bll = new BLL();
+
+            int maDH = Convert.ToInt32(txt_madh.Text);
+            bool isSuccess = bll.XoaDonHang(maDH);
+            if (isSuccess)
+            {
+                MessageBox.Show("Thành công");
+                LoadDonHang();
+            }
+            else
+            {
+                MessageBox.Show("Thất bại");
+            }
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            BLL bll = new BLL();
+
+            DONHANGDTO dh = new DONHANGDTO
+            {
+                MADH = Convert.ToInt32(txt_madh.Text),
+                MAKH = Convert.ToInt32(txt_makh.Text),
+                NGAYLAP = (txt_ngaylap.Text),
+                TONGGIA = decimal.Parse(txt_tonggia.Text)
+            };
+            bool isSuccess = bll.SuaDonHang(dh);
+            if (isSuccess)
+            {
+                MessageBox.Show("Thành công");
+                LoadDonHang();
+            }
+            else
+            {
+                MessageBox.Show("Thất bại");
+            }
+
         }
     }
 }

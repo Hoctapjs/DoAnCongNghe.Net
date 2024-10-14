@@ -261,6 +261,207 @@ namespace DOAN_DAL
             }
         }
 
+        // Thêm sản phẩm
+        public bool ThemSanPham(SANPHAMDTO sp)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO SANPHAM (TENSP, GIA, KICHTHUOC, TOPPING) VALUES (@TENSP, @GIA, @KICHTHUOC, @TOPPING)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@TENSP", sp.TENSP);
+                cmd.Parameters.AddWithValue("@GIA", sp.GIA);
+                cmd.Parameters.AddWithValue("@KICHTHUOC", sp.KICHTHUOC ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@TOPPING", sp.TOPPING ?? (object)DBNull.Value);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        // Sửa sản phẩm
+        public bool SuaSanPham(SANPHAMDTO sp)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "UPDATE SANPHAM SET TENSP = @TENSP, GIA = @GIA, KICHTHUOC = @KICHTHUOC, TOPPING = @TOPPING WHERE MASP = @MASP";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MASP", sp.MASP);
+                cmd.Parameters.AddWithValue("@TENSP", sp.TENSP);
+                cmd.Parameters.AddWithValue("@GIA", sp.GIA);
+                cmd.Parameters.AddWithValue("@KICHTHUOC", sp.KICHTHUOC ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@TOPPING", sp.TOPPING ?? (object)DBNull.Value);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        // Xóa sản phẩm
+        public bool XoaSanPham(int maSP)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM SANPHAM WHERE MASP = @MASP";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MASP", maSP);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        // TẠM XONG SẢN PHẨM
+
+        // BẮT ĐẦU KHÁCH HÀNG
+        // Thêm khách hàng
+        public bool ThemKhachHang(KHACHHANGDTO kh)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO KHACHHANG (TENKH, SODT, DIACHI) VALUES (@TENKH, @SODT, @DIACHI)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@TENKH", kh.TENKH);
+                cmd.Parameters.AddWithValue("@SODT", kh.SODT);
+                cmd.Parameters.AddWithValue("@DIACHI", kh.DIACHI ?? (object)DBNull.Value);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        // Sửa khách hàng
+        public bool SuaKhachHang(KHACHHANGDTO kh)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "UPDATE KHACHHANG SET TENKH = @TENKH, SODT = @SODT, DIACHI = @DIACHI WHERE MAKH = @MAKH";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MAKH", kh.MAKH);
+                cmd.Parameters.AddWithValue("@TENKH", kh.TENKH);
+                cmd.Parameters.AddWithValue("@SODT", kh.SODT);
+                cmd.Parameters.AddWithValue("@DIACHI", kh.DIACHI ?? (object)DBNull.Value);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        // Xóa khách hàng
+        public bool XoaKhachHang(int maKH)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM KHACHHANG WHERE MAKH = @MAKH";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MAKH", maKH);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        // TẠM XONG KHÁCH HÀNG
+
+        // BẮT ĐẦU NHÂN VIÊN
+        // Thêm nhân viên
+        public bool ThemNhanVien(NHANVIENDTO nv)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO NHANVIEN (TENNV, QUYEN, USERNAME, PASSWORD) VALUES (@TENNV, @QUYEN, @USERNAME, @PASSWORD)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@TENNV", nv.TENNV);
+                cmd.Parameters.AddWithValue("@QUYEN", nv.QUYEN);
+                cmd.Parameters.AddWithValue("@USERNAME", nv.USERNAME);
+                cmd.Parameters.AddWithValue("@PASSWORD", nv.PASSWORD);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        // Sửa nhân viên
+        public bool SuaNhanVien(NHANVIENDTO nv)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "UPDATE NHANVIEN SET TENNV = @TENNV, QUYEN = @QUYEN, USERNAME = @USERNAME, PASSWORD = @PASSWORD WHERE MANV = @MANV";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MANV", nv.MANV);
+                cmd.Parameters.AddWithValue("@TENNV", nv.TENNV);
+                cmd.Parameters.AddWithValue("@QUYEN", nv.QUYEN);
+                cmd.Parameters.AddWithValue("@USERNAME", nv.USERNAME);
+                cmd.Parameters.AddWithValue("@PASSWORD", nv.PASSWORD);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        // Xóa nhân viên
+        public bool XoaNhanVien(int maNV)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM NHANVIEN WHERE MANV = @MANV";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MANV", maNV);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        // TẠM XONG NHÂN VIÊN
+
+        // BẮT ĐẦU ĐƠN HÀNG
+        // Thêm đơn hàng
+        public bool ThemDonHang(DONHANGDTO dh)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO DONHANG (MAKH, NGAYLAP, TONGGIA) VALUES (@MAKH, @NGAYLAP, @TONGGIA)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MAKH", dh.MAKH);
+                cmd.Parameters.AddWithValue("@NGAYLAP", dh.NGAYLAP);
+                cmd.Parameters.AddWithValue("@TONGGIA", dh.TONGGIA);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        // Sửa đơn hàng
+        public bool SuaDonHang(DONHANGDTO dh)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "UPDATE DONHANG SET MAKH = @MAKH, NGAYLAP = @NGAYLAP, TONGGIA = @TONGGIA WHERE MADH = @MADH";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MADH", dh.MADH);
+                cmd.Parameters.AddWithValue("@MAKH", dh.MAKH);
+                cmd.Parameters.AddWithValue("@NGAYLAP", dh.NGAYLAP);
+                cmd.Parameters.AddWithValue("@TONGGIA", dh.TONGGIA);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        // Xóa đơn hàng
+        public bool XoaDonHang(int maDH)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM DONHANG WHERE MADH = @MADH";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MADH", maDH);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
 
     }
 }

@@ -97,5 +97,99 @@ namespace DOAN_BLL
             DAL dal = new DAL();
             return dal.GetSoDonHang();
         }
+
+        //
+        public bool ThemSanPham(SANPHAMDTO sp)
+        {
+            DAL dal = new DAL();
+            return dal.ThemSanPham(sp);
+        }
+
+        // Sửa sản phẩm
+        public bool SuaSanPham(SANPHAMDTO sp)
+        {
+            DAL dal = new DAL();
+            return dal.SuaSanPham(sp);
+        }
+
+        // Xóa sản phẩm
+        public bool XoaSanPham(int maSP)
+        {
+            DAL dal = new DAL();
+            return dal.XoaSanPham(maSP);
+        }
+
+        // TẠM XONG SẢN PHẨM
+
+        // BẮT ĐẦU KHÁCH HÀNG
+        // Thêm khách hàng
+        public bool ThemKhachHang(KHACHHANGDTO kh)
+        {
+            DAL dal = new DAL();
+            return dal.ThemKhachHang(kh);
+        }
+
+        // Sửa khách hàng
+        public bool SuaKhachHang(KHACHHANGDTO kh)
+        {
+            DAL dal = new DAL();
+            return dal.SuaKhachHang(kh);
+        }
+
+        // Xóa khách hàng
+        public bool XoaKhachHang(int maKH)
+        {
+            DAL dal = new DAL();
+            return dal.XoaKhachHang(maKH);
+        }
+
+        // TẠM XONG KHÁCH HÀNG
+
+        // BẮT ĐẦU NHÂN VIÊN
+        // Thêm nhân viên
+        public bool ThemNhanVien(NHANVIENDTO nv)
+        {
+            DAL dal = new DAL();
+            return dal.ThemNhanVien(nv);
+        }
+
+        // Sửa nhân viên
+        public bool SuaNhanVien(NHANVIENDTO nv)
+        {
+            DAL dal = new DAL();
+            return dal.SuaNhanVien(nv);
+        }
+
+        // Xóa nhân viên
+        public bool XoaNhanVien(int maNV)
+        {
+            DAL dal = new DAL();
+            return dal.XoaNhanVien(maNV);
+        }
+
+        // TẠM XONG NHÂN VIÊN
+
+        // BẮT ĐẦU ĐƠN HÀNG
+        // Thêm đơn hàng
+        public bool ThemDonHang(DONHANGDTO dh)
+        {
+            DAL dal = new DAL();
+            return dal.ThemDonHang(dh);
+        }
+
+        // Sửa đơn hàng
+        public bool SuaDonHang(DONHANGDTO dh)
+        {
+            DAL dal = new DAL();
+            return dal.SuaDonHang(dh);
+        }
+
+        // Xóa đơn hàng
+        public bool XoaDonHang(int maDH)
+        {
+            DAL dal = new DAL();
+            return dal.XoaDonHang(maDH);
+        }
+
     }
 }

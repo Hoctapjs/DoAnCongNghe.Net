@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.lbl_username = new System.Windows.Forms.Label();
-            this.txt_masp = new System.Windows.Forms.TextBox();
-            this.txt_tensp = new System.Windows.Forms.TextBox();
-            this.txt_gia = new System.Windows.Forms.TextBox();
-            this.txt_kichthuoc = new System.Windows.Forms.TextBox();
+            this.txt_madh = new System.Windows.Forms.TextBox();
+            this.txt_makh = new System.Windows.Forms.TextBox();
+            this.txt_ngaylap = new System.Windows.Forms.TextBox();
+            this.txt_tonggia = new System.Windows.Forms.TextBox();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
@@ -53,41 +53,41 @@
             this.lbl_username.TabIndex = 0;
             this.lbl_username.Text = "label1";
             // 
-            // txt_masp
+            // txt_madh
             // 
-            this.txt_masp.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_masp.Location = new System.Drawing.Point(970, 77);
-            this.txt_masp.Name = "txt_masp";
-            this.txt_masp.PlaceholderText = "Mã đơn hàng";
-            this.txt_masp.Size = new System.Drawing.Size(183, 32);
-            this.txt_masp.TabIndex = 1;
+            this.txt_madh.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_madh.Location = new System.Drawing.Point(970, 77);
+            this.txt_madh.Name = "txt_madh";
+            this.txt_madh.PlaceholderText = "Mã đơn hàng";
+            this.txt_madh.Size = new System.Drawing.Size(183, 32);
+            this.txt_madh.TabIndex = 1;
             // 
-            // txt_tensp
+            // txt_makh
             // 
-            this.txt_tensp.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_tensp.Location = new System.Drawing.Point(970, 124);
-            this.txt_tensp.Name = "txt_tensp";
-            this.txt_tensp.PlaceholderText = "Mã khách hàng";
-            this.txt_tensp.Size = new System.Drawing.Size(183, 32);
-            this.txt_tensp.TabIndex = 2;
+            this.txt_makh.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_makh.Location = new System.Drawing.Point(970, 124);
+            this.txt_makh.Name = "txt_makh";
+            this.txt_makh.PlaceholderText = "Mã khách hàng";
+            this.txt_makh.Size = new System.Drawing.Size(183, 32);
+            this.txt_makh.TabIndex = 2;
             // 
-            // txt_gia
+            // txt_ngaylap
             // 
-            this.txt_gia.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_gia.Location = new System.Drawing.Point(970, 171);
-            this.txt_gia.Name = "txt_gia";
-            this.txt_gia.PlaceholderText = "Ngày lập";
-            this.txt_gia.Size = new System.Drawing.Size(183, 32);
-            this.txt_gia.TabIndex = 3;
+            this.txt_ngaylap.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_ngaylap.Location = new System.Drawing.Point(970, 171);
+            this.txt_ngaylap.Name = "txt_ngaylap";
+            this.txt_ngaylap.PlaceholderText = "Ngày lập";
+            this.txt_ngaylap.Size = new System.Drawing.Size(183, 32);
+            this.txt_ngaylap.TabIndex = 3;
             // 
-            // txt_kichthuoc
+            // txt_tonggia
             // 
-            this.txt_kichthuoc.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_kichthuoc.Location = new System.Drawing.Point(970, 218);
-            this.txt_kichthuoc.Name = "txt_kichthuoc";
-            this.txt_kichthuoc.PlaceholderText = "Tổng giá";
-            this.txt_kichthuoc.Size = new System.Drawing.Size(183, 32);
-            this.txt_kichthuoc.TabIndex = 4;
+            this.txt_tonggia.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_tonggia.Location = new System.Drawing.Point(970, 218);
+            this.txt_tonggia.Name = "txt_tonggia";
+            this.txt_tonggia.PlaceholderText = "Tổng giá";
+            this.txt_tonggia.Size = new System.Drawing.Size(183, 32);
+            this.txt_tonggia.TabIndex = 4;
             // 
             // btn_them
             // 
@@ -100,6 +100,7 @@
             this.btn_them.TabIndex = 6;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = false;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // btn_xoa
             // 
@@ -112,6 +113,7 @@
             this.btn_xoa.TabIndex = 7;
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.UseVisualStyleBackColor = false;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_sua
             // 
@@ -124,6 +126,7 @@
             this.btn_sua.TabIndex = 8;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_thoat
             // 
@@ -161,10 +164,10 @@
             this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_them);
-            this.Controls.Add(this.txt_kichthuoc);
-            this.Controls.Add(this.txt_gia);
-            this.Controls.Add(this.txt_tensp);
-            this.Controls.Add(this.txt_masp);
+            this.Controls.Add(this.txt_tonggia);
+            this.Controls.Add(this.txt_ngaylap);
+            this.Controls.Add(this.txt_makh);
+            this.Controls.Add(this.txt_madh);
             this.Controls.Add(this.lbl_username);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -183,10 +186,10 @@
         private Button btn_sua;
         private Button btn_xoa;
         private Button btn_them;
-        private TextBox txt_kichthuoc;
-        private TextBox txt_gia;
-        private TextBox txt_tensp;
-        private TextBox txt_masp;
+        private TextBox txt_tonggia;
+        private TextBox txt_ngaylap;
+        private TextBox txt_makh;
+        private TextBox txt_madh;
         private Label lbl_username;
     }
 }

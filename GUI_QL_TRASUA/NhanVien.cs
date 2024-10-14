@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DOAN_BLL;
+using DOAN_DTO;
 
 namespace GUI_QL_TRASUA
 {
@@ -32,6 +33,68 @@ namespace GUI_QL_TRASUA
             Home home = new Home();
             home.ShowDialog();
             nv.Close();
+        }
+
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+            BLL bll = new BLL();
+            NHANVIENDTO nv = new NHANVIENDTO
+            {
+                TENNV = txt_tennv.Text,
+                QUYEN = txt_quyen.Text,
+                USERNAME = txt_username.Text,
+                PASSWORD = txt_password.Text
+            };
+            bool isSuccess = bll.ThemNhanVien(nv);
+            if (isSuccess)
+            {
+                MessageBox.Show("Thành công");
+                LoadNhanVien();
+            }
+            else
+            {
+                MessageBox.Show("Thất bại");
+            }
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            BLL bll = new BLL();
+
+            int maNV = Convert.ToInt32(txt_manv.Text);
+            bool isSuccess = bll.XoaNhanVien(maNV);
+            if (isSuccess)
+            {
+                MessageBox.Show("Thành công");
+                LoadNhanVien();
+            }
+            else
+            {
+                MessageBox.Show("Thất bại");
+            }
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            BLL bll = new BLL();
+            NHANVIENDTO nv = new NHANVIENDTO
+            {
+                MANV = Convert.ToInt32(txt_manv.Text),
+                TENNV = txt_tennv.Text,
+                QUYEN = txt_quyen.Text,
+                USERNAME = txt_username.Text,
+                PASSWORD = txt_password.Text
+            };
+            bool isSuccess = bll.SuaNhanVien(nv);
+            if (isSuccess)
+            {
+                MessageBox.Show("Thành công");
+                LoadNhanVien();
+            }
+            else
+            {
+                MessageBox.Show("Thất bại");
+            }
         }
     }
 }

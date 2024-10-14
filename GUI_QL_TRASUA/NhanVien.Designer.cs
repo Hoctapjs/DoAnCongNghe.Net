@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.lbl_username = new System.Windows.Forms.Label();
-            this.txt_masp = new System.Windows.Forms.TextBox();
-            this.txt_tensp = new System.Windows.Forms.TextBox();
-            this.txt_gia = new System.Windows.Forms.TextBox();
-            this.txt_kichthuoc = new System.Windows.Forms.TextBox();
-            this.txt_topping = new System.Windows.Forms.TextBox();
+            this.txt_manv = new System.Windows.Forms.TextBox();
+            this.txt_tennv = new System.Windows.Forms.TextBox();
+            this.txt_quyen = new System.Windows.Forms.TextBox();
+            this.txt_username = new System.Windows.Forms.TextBox();
+            this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
@@ -54,50 +54,50 @@
             this.lbl_username.TabIndex = 0;
             this.lbl_username.Text = "label1";
             // 
-            // txt_masp
+            // txt_manv
             // 
-            this.txt_masp.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_masp.Location = new System.Drawing.Point(970, 77);
-            this.txt_masp.Name = "txt_masp";
-            this.txt_masp.PlaceholderText = "Mã nhân viên";
-            this.txt_masp.Size = new System.Drawing.Size(183, 32);
-            this.txt_masp.TabIndex = 1;
+            this.txt_manv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_manv.Location = new System.Drawing.Point(970, 77);
+            this.txt_manv.Name = "txt_manv";
+            this.txt_manv.PlaceholderText = "Mã nhân viên";
+            this.txt_manv.Size = new System.Drawing.Size(183, 32);
+            this.txt_manv.TabIndex = 1;
             // 
-            // txt_tensp
+            // txt_tennv
             // 
-            this.txt_tensp.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_tensp.Location = new System.Drawing.Point(970, 124);
-            this.txt_tensp.Name = "txt_tensp";
-            this.txt_tensp.PlaceholderText = "Tên nhân viên";
-            this.txt_tensp.Size = new System.Drawing.Size(183, 32);
-            this.txt_tensp.TabIndex = 2;
+            this.txt_tennv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_tennv.Location = new System.Drawing.Point(970, 124);
+            this.txt_tennv.Name = "txt_tennv";
+            this.txt_tennv.PlaceholderText = "Tên nhân viên";
+            this.txt_tennv.Size = new System.Drawing.Size(183, 32);
+            this.txt_tennv.TabIndex = 2;
             // 
-            // txt_gia
+            // txt_quyen
             // 
-            this.txt_gia.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_gia.Location = new System.Drawing.Point(970, 171);
-            this.txt_gia.Name = "txt_gia";
-            this.txt_gia.PlaceholderText = "Quyền";
-            this.txt_gia.Size = new System.Drawing.Size(183, 32);
-            this.txt_gia.TabIndex = 3;
+            this.txt_quyen.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_quyen.Location = new System.Drawing.Point(970, 171);
+            this.txt_quyen.Name = "txt_quyen";
+            this.txt_quyen.PlaceholderText = "Quyền";
+            this.txt_quyen.Size = new System.Drawing.Size(183, 32);
+            this.txt_quyen.TabIndex = 3;
             // 
-            // txt_kichthuoc
+            // txt_username
             // 
-            this.txt_kichthuoc.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_kichthuoc.Location = new System.Drawing.Point(970, 218);
-            this.txt_kichthuoc.Name = "txt_kichthuoc";
-            this.txt_kichthuoc.PlaceholderText = "Username";
-            this.txt_kichthuoc.Size = new System.Drawing.Size(183, 32);
-            this.txt_kichthuoc.TabIndex = 4;
+            this.txt_username.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_username.Location = new System.Drawing.Point(970, 218);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.PlaceholderText = "Username";
+            this.txt_username.Size = new System.Drawing.Size(183, 32);
+            this.txt_username.TabIndex = 4;
             // 
-            // txt_topping
+            // txt_password
             // 
-            this.txt_topping.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_topping.Location = new System.Drawing.Point(970, 265);
-            this.txt_topping.Name = "txt_topping";
-            this.txt_topping.PlaceholderText = "Password";
-            this.txt_topping.Size = new System.Drawing.Size(183, 32);
-            this.txt_topping.TabIndex = 5;
+            this.txt_password.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_password.Location = new System.Drawing.Point(970, 265);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.PlaceholderText = "Password";
+            this.txt_password.Size = new System.Drawing.Size(183, 32);
+            this.txt_password.TabIndex = 5;
             // 
             // btn_them
             // 
@@ -110,6 +110,7 @@
             this.btn_them.TabIndex = 6;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = false;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // btn_xoa
             // 
@@ -122,6 +123,7 @@
             this.btn_xoa.TabIndex = 7;
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.UseVisualStyleBackColor = false;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_sua
             // 
@@ -134,6 +136,7 @@
             this.btn_sua.TabIndex = 8;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_thoat
             // 
@@ -171,11 +174,11 @@
             this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_them);
-            this.Controls.Add(this.txt_topping);
-            this.Controls.Add(this.txt_kichthuoc);
-            this.Controls.Add(this.txt_gia);
-            this.Controls.Add(this.txt_tensp);
-            this.Controls.Add(this.txt_masp);
+            this.Controls.Add(this.txt_password);
+            this.Controls.Add(this.txt_username);
+            this.Controls.Add(this.txt_quyen);
+            this.Controls.Add(this.txt_tennv);
+            this.Controls.Add(this.txt_manv);
             this.Controls.Add(this.lbl_username);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -194,11 +197,11 @@
         private Button btn_sua;
         private Button btn_xoa;
         private Button btn_them;
-        private TextBox txt_topping;
-        private TextBox txt_kichthuoc;
-        private TextBox txt_gia;
-        private TextBox txt_tensp;
-        private TextBox txt_masp;
+        private TextBox txt_password;
+        private TextBox txt_username;
+        private TextBox txt_quyen;
+        private TextBox txt_tennv;
+        private TextBox txt_manv;
         private Label lbl_username;
     }
 }

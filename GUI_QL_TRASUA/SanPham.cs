@@ -1,4 +1,5 @@
 ﻿using DOAN_BLL;
+using DOAN_DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +33,69 @@ namespace GUI_QL_TRASUA
             Home home = new Home();
             home.ShowDialog();
             sp.Close();
+        }
+
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+            BLL bll = new BLL();
+            SANPHAMDTO sp = new SANPHAMDTO
+            {
+                TENSP = txt_tensp.Text,
+                GIA = Convert.ToDecimal(txt_gia.Text),
+                KICHTHUOC = txt_kichthuoc.Text,
+                TOPPING = txt_topping.Text
+            };
+            bool isSuccess = bll.ThemSanPham(sp);
+            if (isSuccess)
+            {
+                MessageBox.Show("Thành công");
+                LoadSanPham();
+            }
+            else
+            {
+                MessageBox.Show("Thất bại");
+            }
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            BLL bll = new BLL();
+            int maSP = Convert.ToInt32(txt_masp.Text);
+            bool isSuccess = bll.XoaSanPham(maSP);
+            if (isSuccess)
+            {
+                MessageBox.Show("Thành công");
+                LoadSanPham();
+
+            }
+            else
+            {
+                MessageBox.Show("Thất bại");
+            }
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            BLL bll = new BLL();
+            SANPHAMDTO sp = new SANPHAMDTO
+            {
+                MASP = Convert.ToInt32(txt_masp.Text),
+                TENSP = txt_tensp.Text,
+                GIA = Convert.ToDecimal(txt_gia.Text),
+                KICHTHUOC = txt_kichthuoc.Text,
+                TOPPING = txt_topping.Text
+            };
+            bool isSuccess = bll.SuaSanPham(sp);
+            if (isSuccess)
+            {
+                MessageBox.Show("Thành công");
+                LoadSanPham();
+
+            }
+            else
+            {
+                MessageBox.Show("Thất bại");
+            }
         }
     }
 }
