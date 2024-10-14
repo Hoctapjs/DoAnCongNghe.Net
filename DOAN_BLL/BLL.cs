@@ -191,5 +191,29 @@ namespace DOAN_BLL
             return dal.XoaDonHang(maDH);
         }
 
+        // TẠM XONG ĐƠN HÀNG
+
+        // BẮT ĐẦU CHI TIẾT ĐƠN HÀNG
+        // Thêm chi tiết đơn hàng
+        public bool ThemChiTietDonHang(CHITIETDONHANGDTO ct)
+        {
+            DAL dal = new DAL();
+            return dal.ThemChiTietDonHang(ct);
+        }
+
+        // Sửa chi tiết đơn hàng
+        public bool SuaChiTietDonHang(CHITIETDONHANGDTO ct)
+        {
+            DAL dal = new DAL();
+            return dal.SuaChiTietDonHang(ct);
+        }
+
+        // Xóa chi tiết đơn hàng
+        public bool XoaChiTietDonHang(int maDH, int maSP)
+        {
+            DAL dal = new DAL();
+            return dal.XoaChiTietDonHang(maDH, maSP);
+        }
+
     }
 }

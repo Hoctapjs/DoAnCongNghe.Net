@@ -1,4 +1,5 @@
 ﻿using DOAN_BLL;
+using DOAN_DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +33,69 @@ namespace GUI_QL_TRASUA
             Home home = new Home();
             home.ShowDialog();
             ct.Close();
+        }
+
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+            BLL bll = new BLL();
+            CHITIETDONHANGDTO ct = new CHITIETDONHANGDTO
+            {
+                MADH = Convert.ToInt32(txt_madh.Text),
+                MASP = Convert.ToInt32(txt_masp.Text),
+                SOLUONG = Convert.ToInt32(txt_soluong.Text),
+                GIA = decimal.Parse(txt_gia.Text)
+            };
+            bool isSuccess = bll.ThemChiTietDonHang(ct);
+            if (isSuccess)
+            {
+                MessageBox.Show("Thành công");
+                LoadChiTietDonHang();
+            }
+            else
+            {
+                MessageBox.Show("Thất bại");
+            }
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            BLL bll = new BLL();
+
+            int maDH = Convert.ToInt32(txt_madh.Text);
+            int maSP = Convert.ToInt32(txt_masp.Text);
+            bool isSuccess = bll.XoaChiTietDonHang(maDH, maSP);
+            if (isSuccess)
+            {
+                MessageBox.Show("Thành công");
+                LoadChiTietDonHang();
+            }
+            else
+            {
+                MessageBox.Show("Thất bại");
+            }
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            BLL bll = new BLL();
+
+            CHITIETDONHANGDTO ct = new CHITIETDONHANGDTO
+            {
+                MADH = Convert.ToInt32(txt_madh.Text),
+                MASP = Convert.ToInt32(txt_masp.Text),
+                SOLUONG = Convert.ToInt32(txt_soluong.Text),
+                GIA = decimal.Parse(txt_gia.Text)
+            };
+            bool isSuccess = bll.SuaChiTietDonHang(ct);
+            if (isSuccess)
+            {
+                MessageBox.Show("Thành công");
+                LoadChiTietDonHang();
+            }
+            else
+            {
+                MessageBox.Show("Thất bại");
+            }
         }
     }
 }

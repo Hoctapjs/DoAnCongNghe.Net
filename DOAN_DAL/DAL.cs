@@ -462,6 +462,59 @@ namespace DOAN_DAL
             }
         }
 
+        // TẠM KẾT THÚC ĐƠN HÀNG
+
+        // BẮT ĐẦU CHI TIẾT ĐƠN HÀNG
+        // Thêm chi tiết đơn hàng
+        public bool ThemChiTietDonHang(CHITIETDONHANGDTO ct)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO CHITIETDONHANG (MADH, MASP, SOLUONG, GIA) VALUES (@MADH, @MASP, @SOLUONG, @GIA)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MADH", ct.MADH);
+                cmd.Parameters.AddWithValue("@MASP", ct.MASP);
+                cmd.Parameters.AddWithValue("@SOLUONG", ct.SOLUONG);
+                cmd.Parameters.AddWithValue("@GIA", ct.GIA);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        // Sửa chi tiết đơn hàng
+        public bool SuaChiTietDonHang(CHITIETDONHANGDTO ct)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "UPDATE CHITIETDONHANG SET SOLUONG = @SOLUONG, GIA = @GIA WHERE MADH = @MADH AND MASP = @MASP";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MADH", ct.MADH);
+                cmd.Parameters.AddWithValue("@MASP", ct.MASP);
+                cmd.Parameters.AddWithValue("@SOLUONG", ct.SOLUONG);
+                cmd.Parameters.AddWithValue("@GIA", ct.GIA);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        // Xóa chi tiết đơn hàng
+        public bool XoaChiTietDonHang(int maDH, int maSP)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM CHITIETDONHANG WHERE MADH = @MADH AND MASP = @MASP";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MADH", maDH);
+                cmd.Parameters.AddWithValue("@MASP", maSP);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+
 
     }
 }
