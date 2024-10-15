@@ -31,6 +31,12 @@ namespace GUI_QL_TRASUA
             BLL bll = new BLL();
             dataGridView_ChiTietDonHang.DataSource = bll.GetAllChiTietDonHang();
             lbl_username.Text = username;
+            cbo_madh.DataSource = bll.GetMaDH_From_DONHANG();
+            cbo_madh.DisplayMember = "MADH";
+            cbo_madh.ValueMember = "MADH";
+            cbo_masp.DataSource = bll.GetMaSP_From_SANPHAM();
+            cbo_masp.DisplayMember = "MASP";
+            cbo_masp.ValueMember = "MASP";
 
         }
 
@@ -46,31 +52,36 @@ namespace GUI_QL_TRASUA
         private void btn_them_Click(object sender, EventArgs e)
         {
             BLL bll = new BLL();
-            CHITIETDONHANGDTO ct = new CHITIETDONHANGDTO
+            if (string.IsNullOrEmpty(txt_gia.Text))
             {
-                MADH = Convert.ToInt32(txt_madh.Text),
-                MASP = Convert.ToInt32(txt_masp.Text),
-                SOLUONG = Convert.ToInt32(txt_soluong.Text),
-                GIA = decimal.Parse(txt_gia.Text)
-            };
-            bool isSuccess = bll.ThemChiTietDonHang(ct);
-            if (isSuccess)
-            {
-                MessageBox.Show("Thành công");
-                LoadChiTietDonHang();
+                CHITIETDONHANGDTO ct = new CHITIETDONHANGDTO
+                {
+                    MADH = Convert.ToInt32(cbo_madh.SelectedValue.ToString()),
+                    MASP = Convert.ToInt32(cbo_masp.SelectedValue.ToString()),
+                    SOLUONG = Convert.ToInt32(txt_soluong.Text),
+                    GIA = 0
+                };
+                bool isSuccess = bll.ThemChiTietDonHang(ct);
+                if (isSuccess)
+                {
+                    MessageBox.Show("Thành công");
+                    LoadChiTietDonHang();
+                }
+                else
+                {
+                    MessageBox.Show("Thất bại");
+                }
             }
-            else
-            {
-                MessageBox.Show("Thất bại");
-            }
+            
+            
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
             BLL bll = new BLL();
 
-            int maDH = Convert.ToInt32(txt_madh.Text);
-            int maSP = Convert.ToInt32(txt_masp.Text);
+            int maDH = Convert.ToInt32(cbo_madh.SelectedValue.ToString());
+            int maSP = Convert.ToInt32(cbo_masp.SelectedValue.ToString());
             bool isSuccess = bll.XoaChiTietDonHang(maDH, maSP);
             if (isSuccess)
             {
@@ -89,10 +100,10 @@ namespace GUI_QL_TRASUA
 
             CHITIETDONHANGDTO ct = new CHITIETDONHANGDTO
             {
-                MADH = Convert.ToInt32(txt_madh.Text),
-                MASP = Convert.ToInt32(txt_masp.Text),
+                MADH = Convert.ToInt32(cbo_madh.SelectedValue.ToString()),
+                MASP = Convert.ToInt32(cbo_masp.SelectedValue.ToString()),
                 SOLUONG = Convert.ToInt32(txt_soluong.Text),
-                GIA = decimal.Parse(txt_gia.Text)
+                GIA = 0
             };
             bool isSuccess = bll.SuaChiTietDonHang(ct);
             if (isSuccess)

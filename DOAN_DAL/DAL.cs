@@ -75,6 +75,45 @@ namespace DOAN_DAL
             }
         }
 
+        public DataTable GetMaDH_From_DONHANG()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT MADH AS MADH FROM DONHANG";
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+        }
+
+        public DataTable GetMaSP_From_SANPHAM()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT MASP AS MASP FROM SANPHAM";
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+        }
+
+        public DataTable GetMaKH_From_KHACHHANG()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT MAKH AS MAKH FROM KHACHHANG";
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+        }
+
         public DataTable GetAllNV_TEN_QUYEN()
         {
             using (SqlConnection conn = new SqlConnection(connectionString))

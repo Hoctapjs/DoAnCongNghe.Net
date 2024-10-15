@@ -38,6 +38,8 @@
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_thoat = new System.Windows.Forms.Button();
             this.dataGridView_ChiTietDonHang = new System.Windows.Forms.DataGridView();
+            this.cbo_madh = new System.Windows.Forms.ComboBox();
+            this.cbo_masp = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTietDonHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +58,7 @@
             // txt_madh
             // 
             this.txt_madh.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_madh.Location = new System.Drawing.Point(970, 77);
+            this.txt_madh.Location = new System.Drawing.Point(970, 108);
             this.txt_madh.Name = "txt_madh";
             this.txt_madh.PlaceholderText = "Mã đơn hàng";
             this.txt_madh.Size = new System.Drawing.Size(183, 32);
@@ -65,7 +67,7 @@
             // txt_masp
             // 
             this.txt_masp.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_masp.Location = new System.Drawing.Point(970, 124);
+            this.txt_masp.Location = new System.Drawing.Point(970, 158);
             this.txt_masp.Name = "txt_masp";
             this.txt_masp.PlaceholderText = "Mã sản phẩm";
             this.txt_masp.Size = new System.Drawing.Size(183, 32);
@@ -74,7 +76,7 @@
             // txt_soluong
             // 
             this.txt_soluong.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_soluong.Location = new System.Drawing.Point(970, 171);
+            this.txt_soluong.Location = new System.Drawing.Point(970, 208);
             this.txt_soluong.Name = "txt_soluong";
             this.txt_soluong.PlaceholderText = "Số lượng";
             this.txt_soluong.Size = new System.Drawing.Size(183, 32);
@@ -83,7 +85,7 @@
             // txt_gia
             // 
             this.txt_gia.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_gia.Location = new System.Drawing.Point(970, 218);
+            this.txt_gia.Location = new System.Drawing.Point(970, 258);
             this.txt_gia.Name = "txt_gia";
             this.txt_gia.PlaceholderText = "Giá";
             this.txt_gia.Size = new System.Drawing.Size(183, 32);
@@ -152,6 +154,22 @@
             this.dataGridView_ChiTietDonHang.Size = new System.Drawing.Size(938, 441);
             this.dataGridView_ChiTietDonHang.TabIndex = 10;
             // 
+            // cbo_madh
+            // 
+            this.cbo_madh.FormattingEnabled = true;
+            this.cbo_madh.Location = new System.Drawing.Point(970, 16);
+            this.cbo_madh.Name = "cbo_madh";
+            this.cbo_madh.Size = new System.Drawing.Size(183, 28);
+            this.cbo_madh.TabIndex = 11;
+            // 
+            // cbo_masp
+            // 
+            this.cbo_masp.FormattingEnabled = true;
+            this.cbo_masp.Location = new System.Drawing.Point(970, 62);
+            this.cbo_masp.Name = "cbo_masp";
+            this.cbo_masp.Size = new System.Drawing.Size(183, 28);
+            this.cbo_masp.TabIndex = 12;
+            // 
             // ChiTietDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -159,6 +177,8 @@
             this.BackgroundImage = global::GUI_QL_TRASUA.Properties.Resources.Layer_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1176, 530);
+            this.Controls.Add(this.cbo_masp);
+            this.Controls.Add(this.cbo_madh);
             this.Controls.Add(this.dataGridView_ChiTietDonHang);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_sua);
@@ -191,5 +211,7 @@
         private TextBox txt_masp;
         private TextBox txt_madh;
         private Label lbl_username;
+        private ComboBox cbo_madh;
+        private ComboBox cbo_masp;
     }
 }

@@ -38,6 +38,26 @@ namespace DOAN_BLL
             return dal.GetAllNhanVien();
         }
 
+        public DataTable GetMaDH_From_DONHANG()
+        {
+            DAL dal = new DAL();
+            return dal.GetMaDH_From_DONHANG();
+        }
+
+        public DataTable GetMaSP_From_SANPHAM()
+        {
+            DAL dal = new DAL();
+            return dal.GetMaSP_From_SANPHAM();
+        }
+
+        public DataTable GetMaKH_From_KHACHHANG()
+        {
+            DAL dal = new DAL();
+            return dal.GetMaKH_From_KHACHHANG();
+        }
+
+
+
         public DataTable GetAllNgayThangNam()
         {
             DAL dal = new DAL();

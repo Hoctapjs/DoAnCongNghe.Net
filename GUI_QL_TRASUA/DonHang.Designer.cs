@@ -38,6 +38,7 @@
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_thoat = new System.Windows.Forms.Button();
             this.dataGridView_DonHang = new System.Windows.Forms.DataGridView();
+            this.cbo_makh = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DonHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,6 +153,14 @@
             this.dataGridView_DonHang.Size = new System.Drawing.Size(938, 441);
             this.dataGridView_DonHang.TabIndex = 10;
             // 
+            // cbo_makh
+            // 
+            this.cbo_makh.FormattingEnabled = true;
+            this.cbo_makh.Location = new System.Drawing.Point(970, 267);
+            this.cbo_makh.Name = "cbo_makh";
+            this.cbo_makh.Size = new System.Drawing.Size(183, 28);
+            this.cbo_makh.TabIndex = 11;
+            // 
             // DonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -159,6 +168,7 @@
             this.BackgroundImage = global::GUI_QL_TRASUA.Properties.Resources.Layer_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1176, 530);
+            this.Controls.Add(this.cbo_makh);
             this.Controls.Add(this.dataGridView_DonHang);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_sua);
@@ -191,5 +201,6 @@
         private TextBox txt_makh;
         private TextBox txt_madh;
         private Label lbl_username;
+        private ComboBox cbo_makh;
     }
 }

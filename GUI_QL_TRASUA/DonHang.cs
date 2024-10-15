@@ -31,6 +31,9 @@ namespace GUI_QL_TRASUA
             BLL bll = new BLL();
             dataGridView_DonHang.DataSource = bll.GetAllDonHang();
             lbl_username.Text = username;
+            cbo_makh.DataSource = bll.GetMaKH_From_KHACHHANG();
+            cbo_makh.DisplayMember = "MAKH";
+            cbo_makh.ValueMember = "MAKH";
 
         }
 
@@ -48,9 +51,9 @@ namespace GUI_QL_TRASUA
             BLL bll = new BLL();
             DONHANGDTO dh = new DONHANGDTO
             {
-                MAKH = Convert.ToInt32(txt_makh.Text),
+                MAKH = Convert.ToInt32(cbo_makh.SelectedValue.ToString()),
                 NGAYLAP = (txt_ngaylap.Text),
-                TONGGIA = decimal.Parse(txt_tonggia.Text)
+                TONGGIA = 0
             };
             bool isSuccess = bll.ThemDonHang(dh);
             if (isSuccess)
@@ -89,9 +92,9 @@ namespace GUI_QL_TRASUA
             DONHANGDTO dh = new DONHANGDTO
             {
                 MADH = Convert.ToInt32(txt_madh.Text),
-                MAKH = Convert.ToInt32(txt_makh.Text),
+                MAKH = Convert.ToInt32(cbo_makh.SelectedValue.ToString()),
                 NGAYLAP = (txt_ngaylap.Text),
-                TONGGIA = decimal.Parse(txt_tonggia.Text)
+                TONGGIA = 0
             };
             bool isSuccess = bll.SuaDonHang(dh);
             if (isSuccess)
