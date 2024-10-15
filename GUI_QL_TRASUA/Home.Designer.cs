@@ -52,6 +52,7 @@
             this.btn_tongdoanthu = new System.Windows.Forms.Button();
             this.dataGridView_NV_QUYEN = new System.Windows.Forms.DataGridView();
             this.lbl_username = new System.Windows.Forms.Label();
+            this.lbl_quyen = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_NV_QUYEN)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             this.btn_sanpham.BackColor = System.Drawing.Color.Black;
             this.btn_sanpham.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_sanpham.ForeColor = System.Drawing.Color.Orange;
-            this.btn_sanpham.Location = new System.Drawing.Point(971, 19);
+            this.btn_sanpham.Location = new System.Drawing.Point(971, 375);
             this.btn_sanpham.Name = "btn_sanpham";
             this.btn_sanpham.Size = new System.Drawing.Size(183, 71);
             this.btn_sanpham.TabIndex = 6;
@@ -125,7 +126,7 @@
             this.btn_khach.BackColor = System.Drawing.Color.Black;
             this.btn_khach.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_khach.ForeColor = System.Drawing.Color.Orange;
-            this.btn_khach.Location = new System.Drawing.Point(971, 375);
+            this.btn_khach.Location = new System.Drawing.Point(971, 19);
             this.btn_khach.Name = "btn_khach";
             this.btn_khach.Size = new System.Drawing.Size(183, 71);
             this.btn_khach.TabIndex = 12;
@@ -340,6 +341,18 @@
             this.lbl_username.TabIndex = 30;
             this.lbl_username.Text = "Username";
             // 
+            // lbl_quyen
+            // 
+            this.lbl_quyen.AutoSize = true;
+            this.lbl_quyen.BackColor = System.Drawing.Color.Black;
+            this.lbl_quyen.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_quyen.ForeColor = System.Drawing.Color.Yellow;
+            this.lbl_quyen.Location = new System.Drawing.Point(358, 34);
+            this.lbl_quyen.Name = "lbl_quyen";
+            this.lbl_quyen.Size = new System.Drawing.Size(87, 35);
+            this.lbl_quyen.TabIndex = 31;
+            this.lbl_quyen.Text = "Quyền";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -347,6 +360,7 @@
             this.BackgroundImage = global::GUI_QL_TRASUA.Properties.Resources.Layer_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1176, 530);
+            this.Controls.Add(this.lbl_quyen);
             this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.dataGridView_NV_QUYEN);
             this.Controls.Add(this.btn_tongdoanthu);
@@ -407,5 +421,6 @@
         private Button btn_tongdoanthu;
         private DataGridView dataGridView_NV_QUYEN;
         private Label lbl_username;
+        private Label lbl_quyen;
     }
 }

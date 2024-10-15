@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-
+using System.Runtime.CompilerServices;
 
 namespace GUI_QL_TRASUA
 {
@@ -48,6 +48,23 @@ namespace GUI_QL_TRASUA
             dataGridView_NV_QUYEN.DataSource = bll.GetAllNV_TEN_QUYEN();
 
             lbl_username.Text = username;
+            lbl_quyen.Text = quyen;
+
+            btn_chitietdh.Visible = true;
+            btn_donhang.Visible = true;
+            btn_khach.Visible = true;
+            btn_nhanvien.Visible = false;
+            btn_sanpham.Visible = false;
+
+
+            if (quyen == "Admin")
+            {
+                btn_chitietdh.Visible = true;
+                btn_donhang.Visible = true;
+                btn_khach.Visible = true;
+                btn_nhanvien.Visible = true;
+                btn_sanpham.Visible = true;
+            }
             //lbl_username1.Text = username;
 
             //lbl_tongdt_nam.Text = bll.TongDoanhThuTheoNam().ToString();
@@ -55,15 +72,23 @@ namespace GUI_QL_TRASUA
 
         private void btn_tongdoanthu_Click(object sender, EventArgs e)
         {
-            BLL bll = new BLL();
+            if (quyen == "Admin")
+            {
+                BLL bll = new BLL();
 
-            string ngay = cbo_ngay.SelectedValue.ToString();
-            int thang = int.Parse(cbo_thang.SelectedValue.ToString());
-            int nam = int.Parse(cbo_nam.SelectedValue.ToString());
+                string ngay = cbo_ngay.SelectedValue.ToString();
+                int thang = int.Parse(cbo_thang.SelectedValue.ToString());
+                int nam = int.Parse(cbo_nam.SelectedValue.ToString());
 
-            lbl_tongdt_ngay.Text = bll.TongDoanhThuTheoNgay(ngay).ToString();
-            lbl_tongdt_thang.Text = bll.TongDoanhThuTheoThang(thang).ToString();
-            lbl_tongdt_nam.Text = bll.TongDoanhThuTheoNam(nam).ToString();
+                lbl_tongdt_ngay.Text = bll.TongDoanhThuTheoNgay(ngay).ToString();
+                lbl_tongdt_thang.Text = bll.TongDoanhThuTheoThang(thang).ToString();
+                lbl_tongdt_nam.Text = bll.TongDoanhThuTheoNam(nam).ToString();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền thực hiện chức năng", "Thông báo");
+            }
+            
         }
 
         private void btn_sanpham_Click(object sender, EventArgs e)
@@ -119,7 +144,7 @@ namespace GUI_QL_TRASUA
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có chắc muốn đóng form ? ", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        if (result == DialogResult.No)
+            if (result == DialogResult.No)
             {
                 e.Cancel = true;
             }
