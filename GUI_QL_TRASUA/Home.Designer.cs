@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_username = new System.Windows.Forms.Label();
             this.btn_sanpham = new System.Windows.Forms.Button();
             this.btn_donhang = new System.Windows.Forms.Button();
             this.btn_chitietdh = new System.Windows.Forms.Button();
@@ -52,20 +51,9 @@
             this.cbo_nam = new System.Windows.Forms.ComboBox();
             this.btn_tongdoanthu = new System.Windows.Forms.Button();
             this.dataGridView_NV_QUYEN = new System.Windows.Forms.DataGridView();
+            this.lbl_username = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_NV_QUYEN)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbl_username
-            // 
-            this.lbl_username.AutoSize = true;
-            this.lbl_username.BackColor = System.Drawing.Color.Black;
-            this.lbl_username.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_username.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl_username.Location = new System.Drawing.Point(12, 19);
-            this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(109, 46);
-            this.lbl_username.TabIndex = 0;
-            this.lbl_username.Text = "label1";
             // 
             // btn_sanpham
             // 
@@ -117,6 +105,7 @@
             this.btn_thoat.TabIndex = 9;
             this.btn_thoat.Text = "Thoát";
             this.btn_thoat.UseVisualStyleBackColor = false;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
             // btn_nhanvien
             // 
@@ -339,6 +328,18 @@
             this.dataGridView_NV_QUYEN.Size = new System.Drawing.Size(382, 236);
             this.dataGridView_NV_QUYEN.TabIndex = 29;
             // 
+            // lbl_username
+            // 
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.BackColor = System.Drawing.Color.Black;
+            this.lbl_username.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_username.ForeColor = System.Drawing.Color.Yellow;
+            this.lbl_username.Location = new System.Drawing.Point(12, 34);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(127, 35);
+            this.lbl_username.TabIndex = 30;
+            this.lbl_username.Text = "Username";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -346,6 +347,7 @@
             this.BackgroundImage = global::GUI_QL_TRASUA.Properties.Resources.Layer_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1176, 530);
+            this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.dataGridView_NV_QUYEN);
             this.Controls.Add(this.btn_tongdoanthu);
             this.Controls.Add(this.cbo_nam);
@@ -369,11 +371,11 @@
             this.Controls.Add(this.btn_chitietdh);
             this.Controls.Add(this.btn_donhang);
             this.Controls.Add(this.btn_sanpham);
-            this.Controls.Add(this.lbl_username);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Home";
             this.Text = "Home";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_NV_QUYEN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -385,7 +387,6 @@
         private Button btn_chitietdh;
         private Button btn_donhang;
         private Button btn_sanpham;
-        private Label lbl_username;
         private Button btn_nhanvien;
         private Button btn_khach;
         private Label label1;
@@ -405,5 +406,6 @@
         private ComboBox cbo_nam;
         private Button btn_tongdoanthu;
         private DataGridView dataGridView_NV_QUYEN;
+        private Label lbl_username;
     }
 }

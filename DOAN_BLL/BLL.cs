@@ -215,5 +215,17 @@ namespace DOAN_BLL
             return dal.XoaChiTietDonHang(maDH, maSP);
         }
 
+        // TẠM XONG CHI TIẾT ĐƠN HÀNG
+
+        // ĐẾN VỚI LOGIN
+        // Phương thức kiểm tra đăng nhập
+        public NHANVIENDTO KiemTraDangNhap(string username, string password)
+        {
+            DAL dal = new DAL();
+            return dal.KiemTraDangNhap(username, password);
+        }
+
+
+
     }
 }

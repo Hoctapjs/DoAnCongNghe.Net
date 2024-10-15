@@ -9,28 +9,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace GUI_QL_TRASUA
 {
     public partial class ChiTietDonHang : Form
     {
-        public ChiTietDonHang()
+        public ChiTietDonHang(string username1, string quyen1)
         {
             InitializeComponent();
+            username = username1;
+            quyen = quyen1;
             LoadChiTietDonHang();
         }
+
+        string username;
+        string quyen;
 
         private void LoadChiTietDonHang()
         {
             BLL bll = new BLL();
             dataGridView_ChiTietDonHang.DataSource = bll.GetAllChiTietDonHang();
+            lbl_username.Text = username;
+
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)
         {
             ChiTietDonHang ct = this;
             ct.Hide();
-            Home home = new Home();
+            Home home = new Home(username, quyen);
             home.ShowDialog();
             ct.Close();
         }

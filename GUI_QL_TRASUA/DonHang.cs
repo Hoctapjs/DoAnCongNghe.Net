@@ -9,28 +9,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace GUI_QL_TRASUA
 {
     public partial class DonHang : Form
     {
-        public DonHang()
+        public DonHang(string username1, string quyen1)
         {
             InitializeComponent();
+            username = username1;
+            quyen = quyen1;
             LoadDonHang();
         }
+
+        string username;
+        string quyen;
 
         private void LoadDonHang()
         {
             BLL bll = new BLL();
             dataGridView_DonHang.DataSource = bll.GetAllDonHang();
+            lbl_username.Text = username;
+
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)
         {
             DonHang dh = this;
             dh.Hide();
-            Home home = new Home();
+            Home home = new Home(username, quyen);
             home.ShowDialog();
             dh.Close();
         }

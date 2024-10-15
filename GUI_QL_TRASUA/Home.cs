@@ -15,21 +15,21 @@ namespace GUI_QL_TRASUA
 {
     public partial class Home : Form
     {
-        public Home()
+        public Home(string username1, string quyen1)
         {
             InitializeComponent();
+            username = username1;
+            quyen = quyen1;
             LoadSanPham();
+
         }
+
 
         string username;
         string quyen;
 
-        public string Username { get => username; set => username = value; }
-        public string Quyen { get => quyen; set => quyen = value; }
-
         private void LoadSanPham()
         {
-            lbl_username.Text = username;
 
             BLL bll = new BLL();
             lbl_soluongkh.Text = bll.GetSoKhachHang().ToString();
@@ -42,11 +42,13 @@ namespace GUI_QL_TRASUA
             cbo_thang.DisplayMember = "ThangNam";
             cbo_thang.ValueMember = "ThangNam";
 
-            cbo_nam.DataSource= bll.GetAllNam();
+            cbo_nam.DataSource = bll.GetAllNam();
             cbo_nam.DisplayMember = "Nam";
             cbo_nam.ValueMember = "Nam";
-
             dataGridView_NV_QUYEN.DataSource = bll.GetAllNV_TEN_QUYEN();
+
+            lbl_username.Text = username;
+            //lbl_username1.Text = username;
 
             //lbl_tongdt_nam.Text = bll.TongDoanhThuTheoNam().ToString();
         }
@@ -68,7 +70,7 @@ namespace GUI_QL_TRASUA
         {
             Home home = this;
             home.Hide();
-            SanPham sp = new SanPham();
+            SanPham sp = new SanPham(username, quyen);
             sp.ShowDialog();
             home.Close();
         }
@@ -77,7 +79,7 @@ namespace GUI_QL_TRASUA
         {
             Home home = this;
             home.Hide();
-            DonHang dh = new DonHang();
+            DonHang dh = new DonHang(username, quyen);
             dh.ShowDialog();
             home.Close();
         }
@@ -86,7 +88,7 @@ namespace GUI_QL_TRASUA
         {
             Home home = this;
             home.Hide();
-            ChiTietDonHang ct = new ChiTietDonHang();
+            ChiTietDonHang ct = new ChiTietDonHang(username, quyen);
             ct.ShowDialog();
             home.Close();
         }
@@ -95,7 +97,7 @@ namespace GUI_QL_TRASUA
         {
             Home home = this;
             home.Hide();
-            NhanVien nv = new NhanVien();
+            NhanVien nv = new NhanVien(username, quyen);
             nv.ShowDialog();
             home.Close();
         }
@@ -104,9 +106,23 @@ namespace GUI_QL_TRASUA
         {
             Home home = this;
             home.Hide();
-            KhachHang khach = new KhachHang();
+            KhachHang khach = new KhachHang(username, quyen);
             khach.ShowDialog();
             home.Close();
+        }
+
+        private void btn_thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn đóng form ? ", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

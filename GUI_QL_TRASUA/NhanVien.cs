@@ -9,28 +9,36 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DOAN_BLL;
 using DOAN_DTO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace GUI_QL_TRASUA
 {
     public partial class NhanVien : Form
     {
-        public NhanVien()
+        public NhanVien(string username1, string quyen1)
         {
             InitializeComponent();
+            username = username1;
+            quyen = quyen1;
             LoadNhanVien();
         }
+
+        string username;
+        string quyen;
 
         private void LoadNhanVien()
         {
             BLL bll = new BLL();
             dataGridView_NhanVien.DataSource = bll.GetAllNhanVien();
+            lbl_username.Text = username;
+
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)
         {
             NhanVien nv = this;
             nv.Hide();
-            Home home = new Home();
+            Home home = new Home(username, quyen);
             home.ShowDialog();
             nv.Close();
         }

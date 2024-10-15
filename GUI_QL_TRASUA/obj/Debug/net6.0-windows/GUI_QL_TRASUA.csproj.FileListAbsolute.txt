@@ -33,4 +33,5 @@ D:\CongNgheNet\QL_TRASUA\GUI_QL_TRASUA\obj\Debug\net6.0-windows\GUI_QL_TRASUA.Nh
 D:\CongNgheNet\QL_TRASUA\GUI_QL_TRASUA\obj\Debug\net6.0-windows\GUI_QL_TRASUA.KhachHang.resources
 D:\CongNgheNet\QL_TRASUA\GUI_QL_TRASUA\obj\Debug\net6.0-windows\GUI_QL_TRASUA.DonHang.resources
 D:\CongNgheNet\QL_TRASUA\GUI_QL_TRASUA\obj\Debug\net6.0-windows\GUI_QL_TRASUA.ChiTietDonHang.resources
+D:\CongNgheNet\QL_TRASUA\GUI_QL_TRASUA\obj\Debug\net6.0-windows\GUI_QL_TRASUA.Login.resources
 D:\CongNgheNet\QL_TRASUA\GUI_QL_TRASUA\obj\Debug\net6.0-windows\GUI_QL_TRASUA.Home.resources

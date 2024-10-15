@@ -514,6 +514,39 @@ namespace DOAN_DAL
             }
         }
 
+        // TẠM XONG CHI TIẾT ĐƠN HÀNG
+
+        // ĐẾN VỚI LOGIN
+        // Phương thức kiểm tra đăng nhập
+        public NHANVIENDTO KiemTraDangNhap(string username, string password)
+        {
+            NHANVIENDTO nhanVien = null;
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT * FROM NHANVIEN WHERE USERNAME = @USERNAME AND PASSWORD = @PASSWORD";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@USERNAME", username);
+                cmd.Parameters.AddWithValue("@PASSWORD", password);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        nhanVien = new NHANVIENDTO
+                        {
+                            MANV = Convert.ToInt32(reader["MANV"]),
+                            TENNV = reader["TENNV"].ToString(),
+                            QUYEN = reader["QUYEN"].ToString(),
+                            USERNAME = reader["USERNAME"].ToString(),
+                            PASSWORD = reader["PASSWORD"].ToString()
+                        };
+                    }
+                }
+            }
+            return nhanVien;
+        }
+
 
 
     }
