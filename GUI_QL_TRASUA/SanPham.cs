@@ -50,7 +50,7 @@ namespace GUI_QL_TRASUA
             {
                 TENSP = txt_tensp.Text,
                 GIA = Convert.ToDecimal(txt_gia.Text),
-                KICHTHUOC = txt_kichthuoc.Text,
+                KICHTHUOC = cbo_kichthuoc.SelectedItem.ToString(),
                 TOPPING = txt_topping.Text
             };
             bool isSuccess = bll.ThemSanPham(sp);
@@ -90,7 +90,7 @@ namespace GUI_QL_TRASUA
                 MASP = Convert.ToInt32(txt_masp.Text),
                 TENSP = txt_tensp.Text,
                 GIA = Convert.ToDecimal(txt_gia.Text),
-                KICHTHUOC = txt_kichthuoc.Text,
+                KICHTHUOC = cbo_kichthuoc.SelectedValue.ToString(),
                 TOPPING = txt_topping.Text
             };
             bool isSuccess = bll.SuaSanPham(sp);

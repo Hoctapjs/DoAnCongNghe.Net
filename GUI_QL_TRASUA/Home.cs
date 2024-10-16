@@ -149,5 +149,10 @@ namespace GUI_QL_TRASUA
                 e.Cancel = true;
             }
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -165,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GUI_QL_TRASUA.Properties.Resources.Layer_1;
+            this.BackgroundImage = global::GUI_QL_TRASUA.Properties.Resources.Layer_111;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1176, 530);
             this.Controls.Add(this.cbo_makh);

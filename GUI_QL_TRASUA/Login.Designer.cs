@@ -41,23 +41,24 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.PowderBlue;
-            this.pictureBox1.Image = global::GUI_QL_TRASUA.Properties.Resources.image_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -4);
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::GUI_QL_TRASUA.Properties.Resources.sp;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 28);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(413, 536);
+            this.pictureBox1.Size = new System.Drawing.Size(373, 460);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(656, 28);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 40.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(594, 28);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(10);
-            this.label1.Size = new System.Drawing.Size(299, 87);
+            this.label1.Size = new System.Drawing.Size(414, 109);
             this.label1.TabIndex = 1;
             this.label1.Text = "Đăng Nhập";
             // 
@@ -65,18 +66,18 @@
             // 
             this.txt_username.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_username.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txt_username.Location = new System.Drawing.Point(492, 191);
+            this.txt_username.Location = new System.Drawing.Point(464, 231);
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(627, 41);
+            this.txt_username.Size = new System.Drawing.Size(654, 41);
             this.txt_username.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(492, 135);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(464, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 35);
             this.label2.TabIndex = 3;
@@ -85,10 +86,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(492, 253);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(464, 293);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 35);
             this.label3.TabIndex = 5;
@@ -98,10 +99,10 @@
             // 
             this.txt_password.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_password.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txt_password.Location = new System.Drawing.Point(492, 309);
+            this.txt_password.Location = new System.Drawing.Point(464, 349);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
-            this.txt_password.Size = new System.Drawing.Size(627, 41);
+            this.txt_password.Size = new System.Drawing.Size(654, 41);
             this.txt_password.TabIndex = 4;
             // 
             // btn_dangnhap
@@ -109,9 +110,9 @@
             this.btn_dangnhap.BackColor = System.Drawing.Color.Black;
             this.btn_dangnhap.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_dangnhap.ForeColor = System.Drawing.Color.Orange;
-            this.btn_dangnhap.Location = new System.Drawing.Point(492, 371);
+            this.btn_dangnhap.Location = new System.Drawing.Point(464, 411);
             this.btn_dangnhap.Name = "btn_dangnhap";
-            this.btn_dangnhap.Size = new System.Drawing.Size(627, 54);
+            this.btn_dangnhap.Size = new System.Drawing.Size(654, 54);
             this.btn_dangnhap.TabIndex = 6;
             this.btn_dangnhap.Text = "Đăng Nhập";
             this.btn_dangnhap.UseVisualStyleBackColor = false;
@@ -121,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GUI_QL_TRASUA.Properties.Resources.Layer_1;
+            this.BackgroundImage = global::GUI_QL_TRASUA.Properties.Resources.Layer_11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1176, 530);
             this.Controls.Add(this.btn_dangnhap);

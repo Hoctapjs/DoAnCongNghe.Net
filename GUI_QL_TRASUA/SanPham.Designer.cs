@@ -31,14 +31,14 @@
             this.lbl_username = new System.Windows.Forms.Label();
             this.txt_masp = new System.Windows.Forms.TextBox();
             this.txt_tensp = new System.Windows.Forms.TextBox();
-            this.txt_gia = new System.Windows.Forms.TextBox();
-            this.txt_kichthuoc = new System.Windows.Forms.TextBox();
             this.txt_topping = new System.Windows.Forms.TextBox();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_thoat = new System.Windows.Forms.Button();
             this.dataGridView_SanPham = new System.Windows.Forms.DataGridView();
+            this.txt_gia = new System.Windows.Forms.TextBox();
+            this.cbo_kichthuoc = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SanPham)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,29 +66,11 @@
             // txt_tensp
             // 
             this.txt_tensp.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_tensp.Location = new System.Drawing.Point(970, 124);
+            this.txt_tensp.Location = new System.Drawing.Point(970, 125);
             this.txt_tensp.Name = "txt_tensp";
             this.txt_tensp.PlaceholderText = "Tên sản phẩm";
             this.txt_tensp.Size = new System.Drawing.Size(183, 32);
             this.txt_tensp.TabIndex = 2;
-            // 
-            // txt_gia
-            // 
-            this.txt_gia.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_gia.Location = new System.Drawing.Point(970, 171);
-            this.txt_gia.Name = "txt_gia";
-            this.txt_gia.PlaceholderText = "Giá";
-            this.txt_gia.Size = new System.Drawing.Size(183, 32);
-            this.txt_gia.TabIndex = 3;
-            // 
-            // txt_kichthuoc
-            // 
-            this.txt_kichthuoc.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_kichthuoc.Location = new System.Drawing.Point(970, 218);
-            this.txt_kichthuoc.Name = "txt_kichthuoc";
-            this.txt_kichthuoc.PlaceholderText = "Kích thước";
-            this.txt_kichthuoc.Size = new System.Drawing.Size(183, 32);
-            this.txt_kichthuoc.TabIndex = 4;
             // 
             // txt_topping
             // 
@@ -162,20 +144,41 @@
             this.dataGridView_SanPham.Size = new System.Drawing.Size(938, 441);
             this.dataGridView_SanPham.TabIndex = 10;
             // 
+            // txt_gia
+            // 
+            this.txt_gia.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_gia.Location = new System.Drawing.Point(970, 173);
+            this.txt_gia.Name = "txt_gia";
+            this.txt_gia.PlaceholderText = "Giá";
+            this.txt_gia.Size = new System.Drawing.Size(183, 32);
+            this.txt_gia.TabIndex = 3;
+            // 
+            // cbo_kichthuoc
+            // 
+            this.cbo_kichthuoc.FormattingEnabled = true;
+            this.cbo_kichthuoc.Items.AddRange(new object[] {
+            "Lớn",
+            "Vừa",
+            "Nhỏ"});
+            this.cbo_kichthuoc.Location = new System.Drawing.Point(970, 221);
+            this.cbo_kichthuoc.Name = "cbo_kichthuoc";
+            this.cbo_kichthuoc.Size = new System.Drawing.Size(183, 28);
+            this.cbo_kichthuoc.TabIndex = 11;
+            // 
             // SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GUI_QL_TRASUA.Properties.Resources.Layer_1;
+            this.BackgroundImage = global::GUI_QL_TRASUA.Properties.Resources.Layer_111;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1176, 530);
+            this.Controls.Add(this.cbo_kichthuoc);
             this.Controls.Add(this.dataGridView_SanPham);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_them);
             this.Controls.Add(this.txt_topping);
-            this.Controls.Add(this.txt_kichthuoc);
             this.Controls.Add(this.txt_gia);
             this.Controls.Add(this.txt_tensp);
             this.Controls.Add(this.txt_masp);
@@ -195,13 +198,13 @@
         private Label lbl_username;
         private TextBox txt_masp;
         private TextBox txt_tensp;
-        private TextBox txt_gia;
-        private TextBox txt_kichthuoc;
         private TextBox txt_topping;
         private Button btn_them;
         private Button btn_xoa;
         private Button btn_sua;
         private Button btn_thoat;
         private DataGridView dataGridView_SanPham;
+        private TextBox txt_gia;
+        private ComboBox cbo_kichthuoc;
     }
 }
