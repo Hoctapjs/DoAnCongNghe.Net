@@ -93,7 +93,7 @@ namespace DOAN_DAL
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT MASP AS MASP FROM SANPHAM";
+                string query = "SELECT MASP AS MASP, TENSP AS TENSP FROM SANPHAM";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);

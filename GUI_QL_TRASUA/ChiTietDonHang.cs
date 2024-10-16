@@ -35,7 +35,7 @@ namespace GUI_QL_TRASUA
             cbo_madh.DisplayMember = "MADH";
             cbo_madh.ValueMember = "MADH";
             cbo_masp.DataSource = bll.GetMaSP_From_SANPHAM();
-            cbo_masp.DisplayMember = "MASP";
+            cbo_masp.DisplayMember = "TENSP";
             cbo_masp.ValueMember = "MASP";
 
         }
