@@ -26,8 +26,8 @@ CREATE TABLE DONHANG (
 );
 
 CREATE TABLE CHITIETDONHANG (
-    MADH INT NOT NULL,                     -- Mã hóa đơn (đơn hàng)
-    MASP INT NOT NULL,                     -- Mã sản phẩm
+    MADH INT PRIMARY KEY NOT NULL,                     -- Mã hóa đơn (đơn hàng)
+    MASP INT PRIMARY KEY NOT NULL,                     -- Mã sản phẩm
     SOLUONG INT NOT NULL,                  -- Số lượng sản phẩm
     GIA DECIMAL(18, 2),           -- Giá của sản phẩm trong đơn hàng
     FOREIGN KEY (MADH) REFERENCES DONHANG(MADH),   -- Khóa ngoại liên kết với bảng ĐƠNHÀNG
@@ -234,6 +234,3 @@ GO
 
     DROP TRIGGER trg_UpdateTongTienDonHang
     
-ALTER TABLE CHITIETDONHANG
-ADD CONSTRAINT PK_CHITIETDONHANG PRIMARY KEY (MADH, MASP)
-

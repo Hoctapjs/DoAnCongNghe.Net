@@ -25,6 +25,7 @@ namespace GUI_QL_TRASUA
 
         string username;
         string quyen;
+        int makh;
 
         private void LoadDonHang()
         {
@@ -49,14 +50,17 @@ namespace GUI_QL_TRASUA
         private void btn_them_Click(object sender, EventArgs e)
         {
             BLL bll = new BLL();
+            bool isSuccess = bll.ThemKhachHang();
+            txt_makh.Text = bll.GetKhachHangMoiNhat().ToString();
+            makh = bll.GetKhachHangMoiNhat();
             DONHANGDTO dh = new DONHANGDTO
             {
-                MAKH = Convert.ToInt32(cbo_makh.SelectedValue.ToString()),
+                MAKH = makh,
                 NGAYLAP = (txt_ngaylap.Text),
                 TONGGIA = 0
             };
-            bool isSuccess = bll.ThemDonHang(dh);
-            if (isSuccess)
+            bool isSuccess1 = bll.ThemDonHang(dh);
+            if (isSuccess1)
             {
                 MessageBox.Show("Thành công");
                 LoadDonHang();

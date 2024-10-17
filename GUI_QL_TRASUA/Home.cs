@@ -45,7 +45,6 @@ namespace GUI_QL_TRASUA
             cbo_nam.DataSource = bll.GetAllNam();
             cbo_nam.DisplayMember = "Nam";
             cbo_nam.ValueMember = "Nam";
-            dataGridView_NV_QUYEN.DataSource = bll.GetAllNV_TEN_QUYEN();
 
             lbl_username.Text = username;
             lbl_quyen.Text = quyen;
@@ -64,6 +63,8 @@ namespace GUI_QL_TRASUA
                 btn_khach.Visible = true;
                 btn_nhanvien.Visible = true;
                 btn_sanpham.Visible = true;
+                dataGridView_NV_QUYEN.DataSource = bll.GetAllNV_TEN_QUYEN();
+
             }
             //lbl_username1.Text = username;
 
@@ -138,17 +139,19 @@ namespace GUI_QL_TRASUA
 
         private void btn_thoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Home home = this;
+            home.Hide();
+            home.Close();
         }
 
-        private void Home_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn đóng form ? ", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-        }
+        //private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    DialogResult result = MessageBox.Show("Bạn có chắc muốn đóng form ? ", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        //    if (result == DialogResult.No)
+        //    {
+        //        e.Cancel = true;
+        //    }
+        //}
 
         private void Home_Load(object sender, EventArgs e)
         {

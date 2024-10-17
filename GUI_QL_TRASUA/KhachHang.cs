@@ -25,6 +25,7 @@ namespace GUI_QL_TRASUA
 
         string username;
         string quyen;
+        int makh;
 
         private void LoadKhachHang()
         {

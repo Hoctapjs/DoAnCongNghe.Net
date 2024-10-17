@@ -336,7 +336,7 @@
             this.lbl_username.AutoSize = true;
             this.lbl_username.BackColor = System.Drawing.Color.Transparent;
             this.lbl_username.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_username.ForeColor = System.Drawing.Color.Black;
+            this.lbl_username.ForeColor = System.Drawing.Color.Blue;
             this.lbl_username.Location = new System.Drawing.Point(12, 34);
             this.lbl_username.Name = "lbl_username";
             this.lbl_username.Size = new System.Drawing.Size(127, 35);
@@ -417,7 +417,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Home";
             this.Text = "Home";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_NV_QUYEN)).EndInit();
             this.ResumeLayout(false);

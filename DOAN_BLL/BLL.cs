@@ -14,6 +14,12 @@ namespace DOAN_BLL
             return dal.GetAllSanPham();
         }
 
+        public int GetKhachHangMoiNhat()
+        {
+            DAL dal = new DAL();
+            return dal.GetKhachHangMoiNhat();
+        }
+
         public DataTable GetAllDonHang()
         {
             DAL dal = new DAL();
@@ -147,6 +153,12 @@ namespace DOAN_BLL
         {
             DAL dal = new DAL();
             return dal.ThemKhachHang(kh);
+        }
+
+        public bool ThemKhachHang()
+        {
+            DAL dal = new DAL();
+            return dal.ThemKhachHang();
         }
 
         // Sửa khách hàng

@@ -23,6 +23,19 @@ namespace DOAN_DAL
             }
         }
 
+        public int GetKhachHangMoiNhat()
+        {
+            int makhmoi;
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "select Top 1 MAKH from KHACHHANG ORDER BY MAKH DESC";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                makhmoi = int.Parse(cmd.ExecuteScalar().ToString());
+            }
+            return makhmoi;
+        }
+
         public DataTable GetAllNhanVien()
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -363,6 +376,21 @@ namespace DOAN_DAL
                 cmd.Parameters.AddWithValue("@TENKH", kh.TENKH);
                 cmd.Parameters.AddWithValue("@SODT", kh.SODT);
                 cmd.Parameters.AddWithValue("@DIACHI", kh.DIACHI ?? (object)DBNull.Value);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        public bool ThemKhachHang()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO KHACHHANG (TENKH, SODT, DIACHI) VALUES (NULL, NULL, NULL)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                //cmd.Parameters.AddWithValue("@TENKH", kh.TENKH);
+                //cmd.Parameters.AddWithValue("@SODT", kh.SODT);
+                //cmd.Parameters.AddWithValue("@DIACHI", kh.DIACHI ?? (object)DBNull.Value);
 
                 return cmd.ExecuteNonQuery() > 0;
             }
